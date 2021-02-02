@@ -20,6 +20,8 @@
 
     .brand-logo {
       max-width: 10rem;
+      width: 5rem;
+      height: auto;
       position:relative;
     }
 
@@ -60,12 +62,60 @@
 
     main {
       text-align: center;
-      background-color: #fcfefe;
-      width: 60%;
-      border-radius: 15px;
+      max-width: 30vw;
       margin: auto;
 
+    }
 
+    #survey-form {
+      text-align: left;
+      background-color: #fcfefe;
+      border-radius: 15px;
+      padding: 20px 5%;
+    }
+
+    .form-group {
+      margin:0 0 10px 0 ;
+
+    }
+
+    .form-group input {
+      display: block;
+      width: 100%;
+    }
+
+    #dropdown {
+      display: block;
+      width: 100%;
+    }
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    fieldset label {
+      display: block;
+    }
+
+
+    textarea {
+      display: block;
+      width: 100%;
+    }
+
+
+
+    button {
+      margin: auto;
+      width: 100%;
+    }
+
+
+
+    footer  {
+      text-align: center;
     }
 
 
@@ -88,7 +138,7 @@
   <body>
 
     <nav class="navbar">
-      <a href="#"><img class="brand-logo" src="images/logo.png" alt="logo"></a>
+      <a href="#"><img class="brand-logo" src="images/logo-without-bkg.svg" alt="logo"></a>
       <ul class="navbar-nav">
         <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
         <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
@@ -103,15 +153,27 @@
       <p id="description">Thank you for taking the time to improve our products!</p>
 
       <form id="survey-form">
-        <label for="name" id="name-label">Name:</label>
-        <input type="text" id="name" name="name" value="" placeholder="Enter your name" required>
+        <!-- basic form survey -->
+        <div class="form-group">
+          <label for="name" id="name-label">Name:</label>
+          <input type="text" id="name" name="name" value="" placeholder="Enter your name" required>
+        </div>
 
-        <label for="email" id="email-label">E-mail:</label>
-        <input type="email" id="email" name="email" value="" placeholder="Enter your e-mail" required>
+        <div class="form-group">
+          <label for="email" id="email-label">E-mail:</label>
+          <input type="email" id="email" name="email" value="" placeholder="Enter your e-mail" required>
+        </div>
 
-        <label for="number" id="number-label">Age:</label>
-        <input type="number" id="number" name="age" value="" placeholder="Enter your age" required min="18" max="99">
+        <div class="form-group">
+          <label for="number" id="number-label">Age:</label>
+          <input type="number" id="number" name="age" value="" placeholder="Enter your age" required min="18" max="99">
+        </div>
 
+
+
+
+
+        <!-- dropdown list -->
         <label for="dropdown">Which product did you buy?</label>
         <select id="dropdown" name="dropdown" value="" required>
           <option disabled selected value>Select an option</option>
@@ -122,39 +184,45 @@
           <option value="blanket">Blanket</option>
         </select>
 
+        <!-- radio -->
         <fieldset>
-          <legend>How you describe the quality of our product?</legend>
-          <input type="radio" id="excellent" name="product-quality" value="excellent">
-          <label for="excellent">Eccellent</label>
-
-          <input type="radio" id="good" name="product-quality" value="good">
-          <label for="good">Good</label>
-
-          <input type="radio" id="no-good" name="product-quality" value="no-good">
-          <label for="no-good">Not so good</label>
-
-          <input type="radio" id="low" name="product-quality" value="low">
-          <label for="low">Low</label>
-        </fieldset>
-
-        <fieldset>
-          
+          <legend>How do you describe the quality of our product?</legend>
+          <label for="excellent"><input type="radio" id="excellent" name="product-quality" value="excellent"> Eccellent</label>
+          <label for="good"><input type="radio" id="good" name="product-quality" value="good"> Good</label>
+          <label for="no-good"><input type="radio" id="no-good" name="product-quality" value="no-good"> Not so good</label>
+          <label for="low"><input type="radio" id="low" name="product-quality" value="low"> Low</label>
         </fieldset>
 
 
+        <!-- Checkboxes -->
+        <fieldset>
+          <legend>What should be improved?</legend>
+
+          <label for="package"><input type="checkbox" id="package" name="improvements" value="package"> Packaging</label>
 
 
+          <label for="antimicrobial"><input type="checkbox" id="antimicrobial" name="improvements" value="antimicrobial"> Antimicrobial Fabric</label>
 
 
+          <label for="deliveryexpress"><input type="checkbox" id="deliveryexpress" name="improvements" value="deliveryexpress"> Express option for delivery</label>
 
 
+          <label for="marketingflyer"><input type="checkbox" id="marketingflyer" name="improvements" value="marketingflyer"> Marketing Flyer</label>
 
 
+          <label for="giftcard"><input type="checkbox" id="giftcard" name="improvements" value="giftcard"> Gift Card option</label>
 
 
+          <label for="franchise"><input type="checkbox" id="franchise" name="improvements" value="franchise"> Franchise opportunity</label>
+        </fieldset>
+
+        <!-- textarea -->
+        <label for="feedback">Want to be helpful? Add a comment or suggestions!</label>
+        <textarea id="feedback" name="feedback" placeholder="Leave a comment here..."></textarea>
 
 
-
+        <!-- submit button -->
+        <button type="submit" name="button">Submit</button>
         </form>
 
     </main>
