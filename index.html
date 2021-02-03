@@ -7,6 +7,10 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
+    <!-- Google Fonts -> Poppins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
 
     <style>
     body {
@@ -15,6 +19,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      font-family: 'Poppins', sans-serif;
 
     }
 
@@ -33,7 +38,6 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-
       justify-content: space-between;
       padding: 15px 10%;
       }
@@ -53,45 +57,111 @@
       margin: auto 15px;
       padding: 15px;
 
+
     }
 
     .nav-item-link:hover {
-      opacity: 1;
+      animation: underline-opacity 0.2s forwards;
+      animation-timing-function: ease-in;
+
+
     }
+
+
+
+
+
+
+
+
+/* WARNING: FROM HERE */
+
+
+    /* Font sizes and style */
+
+    #title {
+      font-weight: 700;
+      font-size: 2rem;
+
+    }
+
+    #description {
+      font-weight: 400;
+      font-style: italic;
+
+    }
+
+    legend, .form-group label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
 
 
     main {
       text-align: center;
-      max-width: 30vw;
+      max-width: 50vw;
       margin: auto;
+      color: rgba(0, 0, 0, 0.7);
 
     }
 
     #survey-form {
       text-align: left;
-      background-color: #fcfefe;
+      background-color: rgb(251, 254, 254, 60%);
       border-radius: 15px;
-      padding: 20px 5%;
+      padding: 5%;
     }
 
     .form-group {
       margin:0 0 10px 0 ;
-
     }
 
-    .form-group input {
+    .form-group label, legend {
+      padding-bottom: 8px;
+    }
+
+    .form-group input, .form-group label, legend , textarea, button, #dropdown {
       display: block;
       width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border-color: transparent;
     }
 
-    #dropdown {
-      display: block;
-      width: 100%;
+
+    input, select {
+      height: 2.75rem;
+      padding-left: 5px;
+      font-family: 'Poppins', sans-serif;
     }
+
+
+    input[type=radio], input[type=checkbox] {
+      height: auto;
+      padding: 0;
+    }
+
+    select{
+      color: grey;
+      font-family: 'Poppins', sans-serif;
+    }
+    option  {
+        color: #000;
+
+    }
+    option:first-child  {
+        color: grey;
+    }
+
+
+
+
 
     fieldset {
       border: 0;
-      margin: 0;
+      margin: 10px 0;
       padding: 0;
     }
 
@@ -101,16 +171,30 @@
 
 
     textarea {
-      display: block;
-      width: 100%;
+
+      font-family: 'Poppins', sans-serif;
+      padding: 10px;
     }
 
 
 
     button {
-      margin: auto;
-      width: 100%;
+      margin: 10px auto;
+
     }
+
+
+
+
+
+
+
+/* WARNING: TO HERE */
+
+
+
+
+
 
 
 
@@ -131,6 +215,15 @@
       }
     }
 
+    @keyframes underline-opacity {
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
 
     </style>
 
@@ -142,7 +235,7 @@
       <ul class="navbar-nav">
         <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
         <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
-        <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Support Us</a></li>
+        <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Contact Us</a></li>
         <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </nav>
@@ -155,34 +248,34 @@
       <form id="survey-form">
         <!-- basic form survey -->
         <div class="form-group">
-          <label for="name" id="name-label">Name:</label>
-          <input type="text" id="name" name="name" value="" placeholder="Enter your name" required>
+          <label for="name" id="name-label">Name</label>
+          <input type="text" id="name" class="form-input" name="name" value="" placeholder="Enter your name" required>
         </div>
 
         <div class="form-group">
-          <label for="email" id="email-label">E-mail:</label>
+          <label for="email" id="email-label">E-mail</label>
           <input type="email" id="email" name="email" value="" placeholder="Enter your e-mail" required>
         </div>
 
         <div class="form-group">
-          <label for="number" id="number-label">Age:</label>
+          <label for="number" id="number-label">Age</label>
           <input type="number" id="number" name="age" value="" placeholder="Enter your age" required min="18" max="99">
         </div>
 
 
-
-
-
         <!-- dropdown list -->
-        <label for="dropdown">Which product did you buy?</label>
-        <select id="dropdown" name="dropdown" value="" required>
-          <option disabled selected value>Select an option</option>
-          <option value="hat">Hat</option>
-          <option value="singlet">Singlet</option>
-          <option value="baby-apron">Baby Apron</option>
-          <option value="socks">Socks</option>
-          <option value="blanket">Blanket</option>
-        </select>
+        <div class="form-group">
+          <label for="dropdown">Which product did you buy?</label>
+          <select id="dropdown" name="dropdown" value="" required>
+            <option disabled selected value>Select an option</option>
+            <option value="hat">Hat</option>
+            <option value="singlet">Singlet</option>
+            <option value="baby-apron">Baby Apron</option>
+            <option value="socks">Socks</option>
+            <option value="blanket">Blanket</option>
+          </select>
+        </div>
+
 
         <!-- radio -->
         <fieldset>
@@ -217,9 +310,10 @@
         </fieldset>
 
         <!-- textarea -->
-        <label for="feedback">Want to be helpful? Add a comment or suggestions!</label>
-        <textarea id="feedback" name="feedback" placeholder="Leave a comment here..."></textarea>
-
+        <div class="form-group">
+          <label for="feedback">Want to be helpful? Add a comment or suggestions!</label>
+          <textarea id="feedback" name="feedback" placeholder="Leave a comment here..."></textarea>
+        </div>
 
         <!-- submit button -->
         <button type="submit" name="button">Submit</button>
