@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Feedback Survey</title>
 
     <!-- Font Awesome Icons -->
@@ -63,8 +64,7 @@
     .nav-item-link:hover {
       animation: underline-opacity 0.2s forwards;
       animation-timing-function: ease-in;
-
-
+      border-bottom-style: solid;
     }
 
 
@@ -93,7 +93,7 @@
 
     legend, .form-group label {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
 
@@ -114,8 +114,9 @@
     }
 
     .form-group {
-      margin:0 0 10px 0 ;
+      margin:25px 0 10px 0 ;
     }
+
 
     .form-group label, legend {
       padding-bottom: 8px;
@@ -135,6 +136,7 @@
       height: 2.75rem;
       padding-left: 5px;
       font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
     }
 
 
@@ -161,17 +163,18 @@
 
     fieldset {
       border: 0;
-      margin: 10px 0;
+      margin: 25px 0 10px;
       padding: 0;
     }
 
+
     fieldset label {
       display: block;
+      font-size: 1.2rem;
     }
 
 
     textarea {
-
       font-family: 'Poppins', sans-serif;
       padding: 10px;
     }
@@ -180,27 +183,71 @@
 
     button {
       margin: 10px auto;
-
+      background-color: #37AF65;
+      color: #FFF;
+      padding: 0.5rem 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
     }
 
 
 
-
-
-
-
-/* WARNING: TO HERE */
-
-
-
-
-
-
-
+/* This is a list for mobile view only - it replace the nav bar on the top to be placed on the bottom without using positioning or bootstrap dropdown  */
+    .list-container-bottom {
+      display: none;
+    }
 
     footer  {
       text-align: center;
     }
+
+
+
+
+
+    @media (max-width:900px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .brand-logo {
+        width: 10rem;
+      }
+
+      main {
+        max-width: 80vw;
+      }
+    }
+
+    @media (max-width:780px) {
+
+      .list-container {
+        display: none;
+      }
+
+      .list-container-bottom {
+        display: inline-block;
+        width: 100%;
+        margin-top: 1.8rem;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        float: none;
+        row-gap: 1.8rem;
+      }
+
+      .nav-item-link {
+        margin-bottom: 5px;
+      }
+
+
+
+
+    }
+
 
 
 
@@ -218,9 +265,11 @@
     @keyframes underline-opacity {
       50% {
         opacity: 0.7;
+
       }
       100% {
         opacity: 1;
+
       }
     }
 
@@ -232,12 +281,15 @@
 
     <nav class="navbar">
       <a href="#"><img class="brand-logo" src="images/logo-without-bkg.svg" alt="logo"></a>
-      <ul class="navbar-nav">
-        <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
-        <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
-        <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Contact Us</a></li>
-        <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/"><i class="fab fa-instagram"></i></a></li>
-      </ul>
+      <div class="list-container">
+        <ul class="navbar-nav">
+          <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
+          <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
+          <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Contact Us</a></li>
+          <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
     </nav>
 
     <main>
@@ -290,39 +342,37 @@
         <!-- Checkboxes -->
         <fieldset>
           <legend>What should be improved?</legend>
-
           <label for="package"><input type="checkbox" id="package" name="improvements" value="package"> Packaging</label>
-
-
           <label for="antimicrobial"><input type="checkbox" id="antimicrobial" name="improvements" value="antimicrobial"> Antimicrobial Fabric</label>
-
-
           <label for="deliveryexpress"><input type="checkbox" id="deliveryexpress" name="improvements" value="deliveryexpress"> Express option for delivery</label>
-
-
           <label for="marketingflyer"><input type="checkbox" id="marketingflyer" name="improvements" value="marketingflyer"> Marketing Flyer</label>
-
-
           <label for="giftcard"><input type="checkbox" id="giftcard" name="improvements" value="giftcard"> Gift Card option</label>
-
-
           <label for="franchise"><input type="checkbox" id="franchise" name="improvements" value="franchise"> Franchise opportunity</label>
         </fieldset>
 
         <!-- textarea -->
         <div class="form-group">
           <label for="feedback">Want to be helpful? Add a comment or suggestions!</label>
-          <textarea id="feedback" name="feedback" placeholder="Leave a comment here..."></textarea>
+          <textarea id="feedback" name="feedback" rows="6" placeholder="Leave a comment here..."></textarea>
         </div>
 
         <!-- submit button -->
-        <button type="submit" name="button">Submit</button>
+        <button type="submit" name="button" >Submit</button>
         </form>
 
     </main>
 
+    <div class="list-container-bottom">
+      <ul class="navbar-nav">
+        <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
+        <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
+        <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Contact Us</a></li>
+        <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+
     <footer>
-      <p>All right to <a href="https://www.instagram.com/lanuvolettasoffice/">"La Nuvoletta Soffice"</a>. Made by <a href="https://github.com/markoscapin">Marco Scapin</a></p>
+      <p>All rights reserved to <a href="https://www.instagram.com/lanuvolettasoffice/">"La Nuvoletta Soffice"</a>. Made by <a href="https://github.com/markoscapin">Marco Scapin</a></p>
     </footer>
 
   </body>
