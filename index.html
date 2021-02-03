@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Feedback Survey</title>
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Feedback Survey</title>
 
-    <!-- Google Fonts -> Poppins -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+  <!-- Google Fonts -> Poppins -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 
-    <style>
+  <style>
     body {
       margin: 0;
       background-image: url("https://images.unsplash.com/photo-1554189097-ffe88e998a2b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
@@ -28,7 +29,7 @@
       max-width: 10rem;
       width: 5rem;
       height: auto;
-      position:relative;
+      position: relative;
     }
 
     .brand-logo:hover {
@@ -41,7 +42,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 15px 10%;
-      }
+    }
 
     .navbar-nav {
       display: flex;
@@ -81,14 +82,15 @@
 
     }
 
-    legend, .form-group label {
+    legend,
+    .form-group label {
       font-weight: 600;
       font-size: 1.2rem;
     }
 
 
 
-/* MAIN SECTION */
+    /* MAIN SECTION */
     main {
       text-align: center;
       max-width: 50vw;
@@ -105,15 +107,21 @@
     }
 
     .form-group {
-      margin:25px 0 10px 0 ;
+      margin: 25px 0 10px 0;
     }
 
 
-    .form-group label, legend {
+    .form-group label,
+    legend {
       padding-bottom: 8px;
     }
 
-    .form-group input, .form-group label, legend , textarea, button, #dropdown {
+    .form-group input,
+    .form-group label,
+    legend,
+    textarea,
+    button,
+    #dropdown {
       display: block;
       width: 100%;
       max-width: 100%;
@@ -123,7 +131,8 @@
     }
 
 
-    input, select {
+    input,
+    select {
       height: 2.75rem;
       padding-left: 5px;
       font-family: 'Poppins', sans-serif;
@@ -131,21 +140,24 @@
     }
 
 
-    input[type=radio], input[type=checkbox] {
+    input[type=radio],
+    input[type=checkbox] {
       height: auto;
       padding: 0;
     }
 
-    select{
+    select {
       color: grey;
       font-family: 'Poppins', sans-serif;
     }
-    option  {
-        color: #000;
+
+    option {
+      color: #000;
 
     }
-    option:first-child  {
-        color: grey;
+
+    option:first-child {
+      color: grey;
     }
 
 
@@ -180,19 +192,19 @@
     }
 
 
-/* FOOTER SECTION */
-/* This is a list for mobile view only - it replace the nav bar on the top to be placed on the bottom without using positioning or bootstrap dropdown  */
+    /* FOOTER SECTION */
+    /* This is a list for mobile view only - it replace the nav bar on the top to be placed on the bottom without using positioning or bootstrap dropdown  */
     .list-container-bottom {
       display: none;
     }
 
-    footer  {
+    footer {
       text-align: center;
     }
 
 
 
-/* @media SECTION */
+    /* @media SECTION */
 
     @media (max-width:900px) {
       .navbar {
@@ -246,9 +258,11 @@
 
     /* @keyframes SECTION */
 
-/* This will animate the logo  */
+    /* This will animate the logo  */
     @keyframes MoveUpDown {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
 
@@ -258,108 +272,27 @@
     }
 
 
-/* This will animate links on navbar */
+    /* This will animate links on navbar */
     @keyframes underline-opacity {
       50% {
         opacity: 0.7;
 
       }
+
       100% {
         opacity: 1;
 
       }
     }
+  </style>
 
+</head>
 
-    </style>
+<body>
 
-  </head>
-  <body>
-
-    <nav class="navbar">
-      <a href="#"><img class="brand-logo" src="images/logo-without-bkg.svg" alt="logo"></a>
-      <div class="list-container">
-        <ul class="navbar-nav">
-          <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
-          <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
-          <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Contact Us</a></li>
-          <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
-
-    </nav>
-
-    <main>
-
-      <h1 id="title">Product Survay Form</h1>
-      <p id="description">Thank you for taking the time to improve our products!</p>
-
-      <form id="survey-form">
-        <!-- basic form survey -->
-        <div class="form-group">
-          <label for="name" id="name-label">Name</label>
-          <input type="text" id="name" class="form-input" name="name" value="" placeholder="Enter your name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email" id="email-label">E-mail</label>
-          <input type="email" id="email" name="email" value="" placeholder="Enter your e-mail" required>
-        </div>
-
-        <div class="form-group">
-          <label for="number" id="number-label">Age</label>
-          <input type="number" id="number" name="age" value="" placeholder="Enter your age" required min="18" max="99">
-        </div>
-
-
-        <!-- dropdown list -->
-        <div class="form-group">
-          <label for="dropdown">Which product did you buy?</label>
-          <select id="dropdown" name="dropdown" value="" required>
-            <option disabled selected value>Select an option</option>
-            <option value="hat">Hat</option>
-            <option value="singlet">Singlet</option>
-            <option value="baby-apron">Baby Apron</option>
-            <option value="socks">Socks</option>
-            <option value="blanket">Blanket</option>
-          </select>
-        </div>
-
-
-        <!-- radio -->
-        <fieldset>
-          <legend>How do you describe the quality of our product?</legend>
-          <label for="excellent"><input type="radio" id="excellent" name="product-quality" value="excellent"> Eccellent</label>
-          <label for="good"><input type="radio" id="good" name="product-quality" value="good"> Good</label>
-          <label for="no-good"><input type="radio" id="no-good" name="product-quality" value="no-good"> Not so good</label>
-          <label for="low"><input type="radio" id="low" name="product-quality" value="low"> Low</label>
-        </fieldset>
-
-
-        <!-- Checkboxes -->
-        <fieldset>
-          <legend>What should be improved?</legend>
-          <label for="package"><input type="checkbox" id="package" name="improvements" value="package"> Packaging</label>
-          <label for="antimicrobial"><input type="checkbox" id="antimicrobial" name="improvements" value="antimicrobial"> Antimicrobial Fabric</label>
-          <label for="deliveryexpress"><input type="checkbox" id="deliveryexpress" name="improvements" value="deliveryexpress"> Express option for delivery</label>
-          <label for="marketingflyer"><input type="checkbox" id="marketingflyer" name="improvements" value="marketingflyer"> Marketing Flyer</label>
-          <label for="giftcard"><input type="checkbox" id="giftcard" name="improvements" value="giftcard"> Gift Card option</label>
-          <label for="franchise"><input type="checkbox" id="franchise" name="improvements" value="franchise"> Franchise opportunity</label>
-        </fieldset>
-
-        <!-- textarea -->
-        <div class="form-group">
-          <label for="feedback">Want to be helpful? Add a comment or suggestions!</label>
-          <textarea id="feedback" name="feedback" rows="6" placeholder="Leave a comment here..."></textarea>
-        </div>
-
-        <!-- submit button -->
-        <button type="submit" name="button" >Submit</button>
-        </form>
-
-    </main>
-
-    <div class="list-container-bottom">
+  <nav class="navbar">
+    <a href="#"><img class="brand-logo" src="images/logo-without-bkg.svg" alt="logo"></a>
+    <div class="list-container">
       <ul class="navbar-nav">
         <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
         <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
@@ -368,9 +301,91 @@
       </ul>
     </div>
 
-    <footer>
-      <p>All rights reserved to <a href="https://www.instagram.com/lanuvolettasoffice/">"La Nuvoletta Soffice"</a>. Made by <a href="https://github.com/markoscapin">Marco Scapin</a></p>
-    </footer>
+  </nav>
 
-  </body>
+  <main>
+
+    <h1 id="title">Product Survay Form</h1>
+    <p id="description">Thank you for taking the time to improve our products!</p>
+
+    <form id="survey-form">
+      <!-- basic form survey -->
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" class="form-input" name="name" value="" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" id="email-label">E-mail</label>
+        <input type="email" id="email" name="email" value="" placeholder="Enter your e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="number" id="number-label">Age</label>
+        <input type="number" id="number" name="age" value="" placeholder="Enter your age" required min="18" max="99">
+      </div>
+
+
+      <!-- dropdown list -->
+      <div class="form-group">
+        <label for="dropdown">Which product did you buy?</label>
+        <select id="dropdown" name="dropdown" value="" required>
+          <option disabled selected value>Select an option</option>
+          <option value="hat">Hat</option>
+          <option value="singlet">Singlet</option>
+          <option value="baby-apron">Baby Apron</option>
+          <option value="socks">Socks</option>
+          <option value="blanket">Blanket</option>
+        </select>
+      </div>
+
+
+      <!-- radio -->
+      <fieldset>
+        <legend>How do you describe the quality of our product?</legend>
+        <label for="excellent"><input type="radio" id="excellent" name="product-quality" value="excellent"> Eccellent</label>
+        <label for="good"><input type="radio" id="good" name="product-quality" value="good"> Good</label>
+        <label for="no-good"><input type="radio" id="no-good" name="product-quality" value="no-good"> Not so good</label>
+        <label for="low"><input type="radio" id="low" name="product-quality" value="low"> Low</label>
+      </fieldset>
+
+
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>What should be improved?</legend>
+        <label for="package"><input type="checkbox" id="package" name="improvements" value="package"> Packaging</label>
+        <label for="antimicrobial"><input type="checkbox" id="antimicrobial" name="improvements" value="antimicrobial"> Antimicrobial Fabric</label>
+        <label for="deliveryexpress"><input type="checkbox" id="deliveryexpress" name="improvements" value="deliveryexpress"> Express option for delivery</label>
+        <label for="marketingflyer"><input type="checkbox" id="marketingflyer" name="improvements" value="marketingflyer"> Marketing Flyer</label>
+        <label for="giftcard"><input type="checkbox" id="giftcard" name="improvements" value="giftcard"> Gift Card option</label>
+        <label for="franchise"><input type="checkbox" id="franchise" name="improvements" value="franchise"> Franchise opportunity</label>
+      </fieldset>
+
+      <!-- textarea -->
+      <div class="form-group">
+        <label for="feedback">Want to be helpful? Add a comment or suggestions!</label>
+        <textarea id="feedback" name="feedback" rows="6" placeholder="Leave a comment here..."></textarea>
+      </div>
+
+      <!-- submit button -->
+      <button type="submit" name="button">Submit</button>
+    </form>
+
+  </main>
+
+  <div class="list-container-bottom">
+    <ul class="navbar-nav">
+      <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/">Home</a></li>
+      <li><a class="nav-item-link" href="#">Give us your feedback!</a></li>
+      <li><a class="nav-item-link" href="mailto:markoscapin@gmail.com">Contact Us</a></li>
+      <li><a class="nav-item-link" href="https://www.instagram.com/lanuvolettasoffice/"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>All rights reserved to <a href="https://www.instagram.com/lanuvolettasoffice/">"La Nuvoletta Soffice"</a>. Made by <a href="https://github.com/markoscapin">Marco Scapin</a></p>
+  </footer>
+
+</body>
+
 </html>
